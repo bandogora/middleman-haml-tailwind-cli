@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'thor/group'
 require 'rbconfig'
 
@@ -30,6 +28,10 @@ module Middleman
       %x(chmod +x #{bin})
       %x(mv #{bin} tailwindcss)
       %x(./tailwindcss init)
+
+      lines = File.readlines('tailwind.config.js')
+      lines[2] = "  content: ['./source/**/*.{html,js,haml}']," << $/
+      File.open('tailwind.config.js', 'w') { |f| f.write(lines.join) }
     end
   end
 end
