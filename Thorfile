@@ -26,10 +26,10 @@ module Middleman
 
       bin = "tailwindcss-#{host_info}"
 
-      run("curl -sL https://github.com/tailwindlabs/tailwindcss/releases/download/v#{twc_version}/#{bin}")
-      run("chmod +x #{bin}")
-      run("mv #{bin} tailwindcss")
-      run('./tailwindcss init')
+      %x(curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/download/v#{twc_version}/#{bin})
+      %x(chmod +x #{bin})
+      %x(mv #{bin} tailwindcss)
+      %x(./tailwindcss init)
     end
   end
 end
