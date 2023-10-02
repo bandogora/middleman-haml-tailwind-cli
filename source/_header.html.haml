@@ -1,0 +1,24 @@
+%nav.flex.items-center.justify-between.flex-wrap.bg-teal-500.py-3.px-6
+  .flex.items-center.flex-no-shrink.text-white.mr-6
+    %svg.fill-current.h-8.w-8.mr-2{ width: '54',
+                                    height: '54',
+                                    viewBox: '0 0 54 54',
+                                    xmlns: 'http://www.w3.org/2000/svg' }
+      %path{ d: 'M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 ' \
+                '8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 ' \
+                '10.8-13.5 10.8-10.8 ' \
+                '0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 ' \
+                '38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 ' \
+                '9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 ' \
+                '10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z' }
+    %span.font-semibold.text-xl.tracking-tight Tailwind CSS
+  .w-full.flex-grow.sm:flex.sm:items-center.sm:w-auto
+    .text-sm.sm:flex-grow
+      = link_to 'Middleman Docs', 'https://middlemanapp.com/basics/templating_language/',
+                class: 'text-teal-200 mr-4 mt-4 block no-underline hover:text-white sm:mt-0 sm:inline-block'
+      = link_to 'Tailwindcss Docs', 'https://tailwindcss.com/docs/',
+                class: 'text-teal-200 mr-4 mt-4 block no-underline hover:text-white sm:mt-0 sm:inline-block'
+    = link_to 'Tailwind Play', 'https://play.tailwindcss.com/',
+              class: ['hover:text-teal-500', 'mt-4', 'inline-block', 'rounded', 'border', 'border-white',
+                      'px-4', 'py-2', 'text-sm', 'leading-none', 'text-white', 'no-underline',
+                      'hover:border-transparent', 'hover:bg-white', 'sm:mt-0'].join(' ')
