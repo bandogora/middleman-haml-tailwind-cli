@@ -20,7 +20,7 @@ module Middleman
 
     def copy_default_files
       directory 'template', '.', exclude_pattern: /\.DS_Store$/
-      twc_version = '3.3.3'
+      twc_version = '3.3.6'
 
       bin = "tailwindcss-#{host_info}"
 
